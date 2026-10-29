@@ -1,1259 +1,625 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatureTech - ন্যাচারটেক ডিজিটাল পয়েন্ট ও অনলাইন সেবা</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome 6 Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Hind Siliguri -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Hind Siliguri"', 'sans-serif'],
-                    },
-                    colors: {
-                        nature: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                            800: '#065f46',
-                            900: '#064e3b',
-                        },
-                        brandTeal: {
-                            500: '#0d9488',
-                            600: '#0f766e',
-                            700: '#115e59',
-                            900: '#134e4a',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Hind Siliguri', sans-serif;
-            background-color: #f8fafc;
-        }
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-        }
-        .badge-pulse {
-            animation: pulse-ring 2s infinite;
-        }
-        @keyframes pulse-ring {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatureTech - ডিজিটাল পয়েন্ট ও অনলাইন সেবা</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    .custom-shadow {
+      box-shadow: 0 10px 30px -5px rgba(5, 150, 105, 0.15);
+    }
+  </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-900 text-white text-xs sm:text-sm py-2 px-4 shadow-sm border-b border-emerald-800/40">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center space-x-2 space-x-reverse font-medium">
-                <span class="bg-emerald-500 text-white text-[11px] px-2 py-0.5 rounded-full uppercase tracking-wider font-bold animate-pulse">জরুরি নোটিশ</span>
-                <span>🔥 বাংলাদেশ রেলওয়ে ও প্রাইমারি শিক্ষক নিয়োগ আবেদন চলমান! নির্ভুল আবেদনে আমাদের শরণাপন্ন হোন।</span>
-            </div>
-            <div class="flex items-center gap-4 text-xs">
-                <a href="tel:01967831883" class="hover:text-emerald-300 transition flex items-center gap-1.5 font-bold">
-                    <i class="fa-solid fa-phone-volume text-emerald-400"></i> ০১৯৬৭-৮৩১৮৮৩
-                </a>
-                <span class="text-slate-500">|</span>
-                <span class="flex items-center gap-1.5 text-slate-300">
-                    <i class="fa-solid fa-location-dot text-emerald-400"></i> উকিল পাড়া রোড, পুরান থানা, কিশোরগঞ্জ
-                </span>
-            </div>
-        </div>
+  <!-- টপ নোটিশ বার -->
+  <div class="bg-emerald-900 text-emerald-100 px-4 py-2 text-xs md:text-sm font-medium border-b border-emerald-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-emerald-700 text-white px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider animate-pulse">জরুরি নোটিশ</span>
+        <span>সকল সরকারি-বেসরকারি চাকরির অনলাইন আবেদন ও নির্ভুল কম্পিউটার কম্পোজ সেবা দেওয়া হয়।</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i>উকিল পাড়া রোড, পুরান থানা, কিশোরগঞ্জ</span>
+        <a href="tel:01967831883" class="hover:text-emerald-300 font-bold"><i class="fa-solid fa-phone text-emerald-400 mr-1"></i>01967831883</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo -->
-                <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-emerald-600/30">
-                        <i class="fa-solid fa-laptop-code text-2xl"></i>
-                    </div>
-                    <div>
-                        <a href="#" class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-700 to-teal-900 bg-clip-text text-transparent block leading-tight">
-                            NatureTech
-                        </a>
-                        <span class="text-xs font-semibold text-slate-500 tracking-wide block">ন্যাচারটেক ডিজিটাল পয়েন্ট</span>
-                    </div>
-                </div>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center gap-7 font-medium text-slate-700">
-                    <a href="#circulars" class="hover:text-emerald-600 transition flex items-center gap-1.5 py-1">
-                        <i class="fa-regular fa-newspaper text-emerald-500"></i> চাকরির খবর ও আবেদন
-                    </a>
-                    <a href="#services" class="hover:text-emerald-600 transition flex items-center gap-1.5 py-1">
-                        <i class="fa-solid fa-cubes text-emerald-500"></i> সকল সেবাসমূহ
-                    </a>
-                    <a href="#order-now" class="hover:text-emerald-600 transition flex items-center gap-1.5 py-1">
-                        <i class="fa-solid fa-cloud-arrow-up text-emerald-500"></i> অনলাইন অর্ডার
-                    </a>
-                    <a href="#calculator" class="hover:text-emerald-600 transition flex items-center gap-1.5 py-1">
-                        <i class="fa-solid fa-calculator text-emerald-500"></i> ফি ক্যালকুলেটর
-                    </a>
-                    <a href="#tracking" class="hover:text-emerald-600 transition flex items-center gap-1.5 py-1">
-                        <i class="fa-solid fa-magnifying-glass-location text-emerald-500"></i> অর্ডার ট্র্যাকিং
-                    </a>
-                </nav>
-
-                <!-- Action Button -->
-                <div class="hidden sm:flex items-center gap-3">
-                    <a href="#order-now" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> সরাসরি সেবা নিন
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobileMenuBtn" class="md:hidden text-slate-700 p-2.5 rounded-lg hover:bg-slate-100 transition focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
-                </button>
-            </div>
+  <!-- হেডার ও নেভিগেশন -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-emerald-500/20">
+          <i class="fa-solid fa-feather-pointed"></i>
         </div>
+        <div>
+          <h1 class="text-2xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+            NatureTech
+            <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full border border-emerald-200">ন্যাচারটেক</span>
+          </h1>
+          <p class="text-xs text-slate-500">ডিজিটাল পয়েন্ট ও অনলাইন সেবা কেন্দ্র</p>
+        </div>
+      </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-5 space-y-2">
-            <a href="#circulars" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-700">চাকরির খবর ও আবেদন</a>
-            <a href="#services" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-700">সকল সেবাসমূহ</a>
-            <a href="#order-now" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-700">অনলাইন অর্ডার দিন</a>
-            <a href="#calculator" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-700">ফি ক্যালকুলেটর</a>
-            <a href="#tracking" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-emerald-50 hover:text-emerald-700">অর্ডার স্ট্যাটাস ট্র্যাক</a>
-            <a href="https://wa.me/8801967831883" target="_blank" class="block w-full text-center bg-emerald-600 text-white py-2.5 rounded-xl font-bold mt-2">
-                <i class="fa-brands fa-whatsapp mr-1"></i> হোয়াটসঅ্যাপে নক করুন (০১৯৬৭-৮৩১৮৮৩)
+      <nav class="hidden md:flex items-center gap-6 font-medium text-slate-600 text-sm">
+        <a href="#circulars" class="hover:text-emerald-600 transition-colors">চাকরির সার্কুলার</a>
+        <a href="#services" class="hover:text-emerald-600 transition-colors">সকল সেবাসমূহ</a>
+        <a href="#calculator" class="hover:text-emerald-600 transition-colors">ফি ক্যালকুলেটর</a>
+        <a href="#order" class="hover:text-emerald-600 transition-colors">অনলাইন আবেদন/অর্ডার</a>
+        <a href="#contact" class="hover:text-emerald-600 transition-colors">যোগাযোগ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/8801967831883" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-md transition-all hover:scale-[1.02]">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden sm:inline">সরাসরি হোয়াটসঅ্যাপ</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ব্যানার সেকশন -->
+  <section class="relative overflow-hidden pt-12 pb-16 bg-gradient-to-b from-emerald-50/60 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 border border-emerald-200/80 px-3.5 py-1.5 rounded-full text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+            ঘরে বসেই পান নির্ভুল ডিজিটাল ও কম্পোজ সেবা
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+            চাকরির আবেদন থেকে শুরু করে যেকোনো <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">কম্পিউটার সেবা</span> এখন এক ঠিকানায়!
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            সরকারি-বেসরকারি চাকরির অনলাইন আবেদন, জীবনবৃত্তান্ত (CV) তৈরি, আইডি কার্ড, পাসপোর্ট সেবা এবং বাংলা-ইংরেজি নির্ভুল কম্পিউটার কম্পোজ করুন কোনো ঝামেলা ছাড়াই।
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#circulars" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 transition-all flex items-center gap-2">
+              <i class="fa-solid fa-bullhorn"></i> চলমান সার্কুলার দেখুন
             </a>
+            <a href="#order" class="bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center gap-2">
+              <i class="fa-solid fa-file-signature"></i> সরাসরি আবেদন পাঠান
+            </a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200">
+            <div>
+              <p class="text-xl sm:text-2xl font-bold text-slate-900">১০০%</p>
+              <p class="text-xs text-slate-500 font-medium">নির্ভুল আবেদনের নিশ্চয়তা</p>
+            </div>
+            <div>
+              <p class="text-xl sm:text-2xl font-bold text-slate-900">১০০ টাকা</p>
+              <p class="text-xs text-slate-500 font-medium">চাকরির আবেদন সার্ভিস ফি</p>
+            </div>
+            <div>
+              <p class="text-xl sm:text-2xl font-bold text-slate-900">২৪/৭</p>
+              <p class="text-xs text-slate-500 font-medium">হোয়াটসঅ্যাপ সাপোর্ট</p>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-emerald-50/60 via-slate-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Content -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs sm:text-sm font-semibold">
-                        <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
-                        ১০০% নির্ভুল কম্পিউটার কম্পোজ ও সরকারি-বেসরকারি অনলাইন আবেদন
-                    </div>
-                    
-                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-slate-900 leading-tight">
-                        দোকানে না গিয়েও নিন <br>
-                        <span class="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">সকল ডিজিটাল ও অনলাইন সেবা</span>
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        চাকরি ও ভর্তির আবেদন, জীবনবৃত্তান্ত (CV) তৈরি, এনআইডি ও পাসপোর্ট সংক্রান্ত কাজ, দলিল ও প্রজেক্ট কম্পোজ—ন্যাচারটেকের দক্ষ টিম আপনার কাজ করে দেবে ঘরে বসেই, সবচেয়ে সাশ্রয়ী খরচে।
-                    </p>
-
-                    <!-- Feature Badges -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                        <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-slate-800">১০০% নির্ভুলতা</p>
-                                <p class="text-[11px] text-slate-500">বিশেষজ্ঞ অপারেটর</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-bolt"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-slate-800">দ্রুত ডেলিভারি</p>
-                                <p class="text-[11px] text-slate-500">হোয়াটসঅ্যাপ / ইমেইল</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center gap-3 col-span-2 sm:col-span-1">
-                            <div class="w-9 h-9 rounded-lg bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-slate-800">সঠিক মূল্য</p>
-                                <p class="text-[11px] text-slate-500">কোনো গোপন চার্জ নেই</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
-                        <a href="#order-now" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> আবেদন ও কম্পোজের অর্ডার দিন
-                        </a>
-                        <a href="#circulars" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-bold text-center border border-slate-300 shadow-sm transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-briefcase text-emerald-600"></i> চলমান চাকরির সার্কুলার
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Quick Order Card Preview -->
-                <div class="lg:col-span-5">
-                    <div class="relative mx-auto max-w-md">
-                        <!-- Decorative glow -->
-                        <div class="absolute -top-4 -right-4 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-                        <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-
-                        <div class="relative bg-white/95 backdrop-blur-md p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-100">
-                            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-                                <div class="flex items-center gap-2.5">
-                                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
-                                        <i class="fa-solid fa-headset text-lg"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-slate-800 text-base">তাত্ক্ষণিক সহায়তা কাউন্টার</h3>
-                                        <p class="text-xs text-slate-500">অনলাইনে কাজ বুঝে নিন মুহূর্তেই</p>
-                                    </div>
-                                </div>
-                                <span class="px-2.5 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold flex items-center gap-1">
-                                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> অনলাইন
-                                </span>
-                            </div>
-
-                            <div class="mt-5 space-y-3">
-                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between border border-slate-100">
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-solid fa-file-invoice text-emerald-600 text-xl"></i>
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-700">সরকারি/বেসরকারি আবেদন</p>
-                                            <p class="text-[11px] text-slate-500">ছবি-স্বাক্ষর রিসাইজসহ ফুল প্যাকেজ</p>
-                                        </div>
-                                    </div>
-                                    <span class="text-xs font-bold text-emerald-600">৪০-১০০ ৳</span>
-                                </div>
-
-                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between border border-slate-100">
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-solid fa-file-lines text-teal-600 text-xl"></i>
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-700">মডার্ন প্রফেশনাল CV / রেজুমে</p>
-                                            <p class="text-[11px] text-slate-500">PDF + প্রিন্ট রেডি কপি</p>
-                                        </div>
-                                    </div>
-                                    <span class="text-xs font-bold text-teal-600">৫০-১৫০ ৳</span>
-                                </div>
-
-                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between border border-slate-100">
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-solid fa-keyboard text-cyan-600 text-xl"></i>
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-700">কম্পোজ ও অনুবাদ সেবা</p>
-                                            <p class="text-[11px] text-slate-500">বাংলা ও ইংরেজি নিখুঁত টাইপিং</p>
-                                        </div>
-                                    </div>
-                                    <span class="text-xs font-bold text-cyan-600">১০-৩০ ৳/পৃষ্ঠা</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-6 pt-4 border-t border-slate-100">
-                                <a href="#order-now" class="w-full block text-center py-3 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-semibold rounded-xl hover:shadow-lg transition">
-                                    অনলাইন ফাইল আপলোড করুন <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="lg:col-span-5">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+            <div class="flex items-center justify-between border-b pb-4">
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg">ন্যাচারটেক কুইক অর্ডার পোর্টাল</h3>
+                <p class="text-xs text-slate-500">তথ্য পূরণ করে সরাসরি হোয়াটসঅ্যাপে পাঠান</p>
+              </div>
+              <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bolt"></i>
+              </span>
             </div>
+
+            <form id="quickHeroForm" onsubmit="handleQuickSubmit(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">আপনার নাম *</label>
+                <input type="text" id="quickName" required placeholder="উদাঃ মোঃ আব্দুল্লাহ" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+                <input type="tel" id="quickPhone" required placeholder="01XXXXXXXXX" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">কী সেবা নিতে চান? *</label>
+                <select id="quickService" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="চাকরির আবেদন (সরকারি/বেসরকারি)">চাকরির আবেদন (সরকারি/বেসরকারি)</option>
+                  <option value="পায়রা বন্দর কর্তৃপক্ষ আবেদন (৫৮ পদ)">পায়রা বন্দর কর্তৃপক্ষ আবেদন (৫৮ পদ)</option>
+                  <option value="বাংলা/ইংরেজি কম্পোজ ও প্রিন্ট">বাংলা/ইংরেজি কম্পোজ ও প্রিন্ট</option>
+                  <option value="প্রফেশনাল জীবনবৃত্তান্ত (CV) তৈরি">প্রফেশনাল জীবনবৃত্তান্ত (CV) তৈরি</option>
+                  <option value="ভর্তি আবেদন ও অন্যান্য অনলাইন সেবা">ভর্তি আবেদন ও অন্যান্য অনলাইন সেবা</option>
+                </select>
+              </div>
+              <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl transition shadow flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> হোয়াটসঅ্যাপে শুরু করুন
+              </button>
+            </form>
+          </div>
         </div>
-    </section>
-
-    <!-- SECTION 1: Job Circulars & Admissions (অনলাইন আবেদনের সব খবর) -->
-    <section id="circulars" class="py-16 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-                <div>
-                    <span class="text-emerald-600 font-bold text-sm tracking-wide uppercase flex items-center gap-1.5">
-                        <i class="fa-solid fa-bell"></i> প্রতিদিনের লাইভ সার্কুলার
-                    </span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
-                        চলমান চাকরি ও ভর্তি আবেদনের খবর
-                    </h2>
-                    <p class="text-slate-500 text-sm mt-1">সরাসরি ঘরে বসে নির্ভুলভাবে আবেদন করতে ‘আবেদন সেবা নিন’ চাপুন</p>
-                </div>
-
-                <!-- Filters & Search -->
-                <div class="mt-4 md:mt-0 flex flex-wrap items-center gap-3">
-                    <div class="relative">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                        <input type="text" id="circularSearch" placeholder="সার্কুলার খুঁজুন..." class="pl-8 pr-3 py-2 text-xs sm:text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 w-44 sm:w-56">
-                    </div>
-                    
-                    <div class="flex bg-slate-100 p-1 rounded-xl text-xs sm:text-sm font-semibold text-slate-600">
-                        <button onclick="filterCirculars('all')" class="circ-filter-btn px-3 py-1.5 rounded-lg bg-white shadow text-emerald-700">সকল</button>
-                        <button onclick="filterCirculars('govt')" class="circ-filter-btn px-3 py-1.5 rounded-lg hover:text-emerald-600">সরকারি</button>
-                        <button onclick="filterCirculars('private')" class="circ-filter-btn px-3 py-1.5 rounded-lg hover:text-emerald-600">বেসরকারি</button>
-                        <button onclick="filterCirculars('admission')" class="circ-filter-btn px-3 py-1.5 rounded-lg hover:text-emerald-600">ভর্তি</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Circulars Grid -->
-            <div id="circularGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Circular Card 1 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="govt" data-title="বাংলাদেশ রেলওয়ে নিয়োগ ২০২৬">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-100 text-emerald-800">সরকারি চাকরি</span>
-                            <span class="text-xs font-semibold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md border border-rose-100 flex items-center gap-1">
-                                <i class="fa-regular fa-clock"></i> বাকি ৫ দিন
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">বাংলাদেশ রেলওয়ে বিভিন্ন পদে বড় নিয়োগ বিজ্ঞপ্তি</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-users text-emerald-600 mr-1"></i> মোট পদসংখ্যা: <strong class="text-slate-700">৫৮৬ জন</strong></p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>শিক্ষাগত যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">এইচএসসি / স্নাতক</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">১৫ নভেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>সরকারি ফি:</span>
-                                <span class="font-medium text-slate-800">২২৩ ৳</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('বাংলাদেশ রেলওয়ে বিভিন্ন পদে নিয়োগ', 'সরকারি চাকরি', 223)" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Circular Card 2 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="govt" data-title="প্রাইমারি সহকারী শিক্ষক নিয়োগ">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-100 text-emerald-800">সরকারি চাকরি</span>
-                            <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-100 flex items-center gap-1">
-                                <i class="fa-regular fa-clock"></i> বাকি ১২ দিন
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">প্রাথমিক বিদ্যালয় সহকারী শিক্ষক নিয়োগ</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-users text-emerald-600 mr-1"></i> মোট পদসংখ্যা: <strong class="text-slate-700">বিশাল নিয়োগ</strong></p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>শিক্ষাগত যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">স্নাতক (পাস/অনার্স)</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">২২ নভেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>সরকারি ফি:</span>
-                                <span class="font-medium text-slate-800">১১০ ৳</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('প্রাথমিক বিদ্যালয় সহকারী শিক্ষক নিয়োগ', 'সরকারি চাকরি', 110)" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Circular Card 3 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="admission" data-title="ঢাকা বিশ্ববিদ্যালয় ও গুচ্ছ বিশ্ববিদ্যালয় ভর্তি">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-teal-100 text-teal-800">ভর্তি আবেদন</span>
-                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100 flex items-center gap-1">
-                                <i class="fa-regular fa-clock"></i> নতুন শুরু
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">পাবলিক বিশ্ববিদ্যালয় স্নাতক (সম্মান) ভর্তি ২০২৬</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-graduation-cap text-teal-600 mr-1"></i> ক, খ, গ ইউনিট ভর্তি তথ্য</p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">এইচএসসি ২০২৫/২০২৬ পাস</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">৩০ নভেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>ভর্তি ফি:</span>
-                                <span class="font-medium text-slate-800">১,০৫০ ৳</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('বিশ্ববিদ্যালয় স্নাতক প্রথম বর্ষ ভর্তি', 'ভর্তি আবেদন', 1050)" class="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Circular Card 4 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="private" data-title="ব্র্যাক ব্যাংক ও এনজিও নিয়োগ">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-indigo-100 text-indigo-800">বেসরকারি চাকরি</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-200 px-2.5 py-1 rounded-md">নিয়মিত</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">শীর্ষস্থানীয় প্রাইভেট ব্যাংক ও NGO ফিল্ড অফিসার নিয়োগ</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-briefcase text-indigo-600 mr-1"></i> কিশোরগঞ্জসহ সকল জেলায় পদায়ন</p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>শিক্ষাগত যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">এইচএসসি / ডিগ্রি পাস</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">১০ ডিসেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদন ফি:</span>
-                                <span class="font-medium text-emerald-700">ফ্রি (কোনো সরকারি ফি নেই)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('প্রাইভেট ব্যাংক ও NGO পদ আবেদন', 'বেসরকারি চাকরি', 0)" class="w-full py-2.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Circular Card 5 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="govt" data-title="খাদ্য অধিদপ্তর নিয়োগ বিজ্ঞপ্তি">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-100 text-emerald-800">সরকারি চাকরি</span>
-                            <span class="text-xs font-semibold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md border border-rose-100 flex items-center gap-1">
-                                <i class="fa-regular fa-clock"></i> বাকি ৩ দিন
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">খাদ্য অধিদপ্তর বিভিন্ন ক্যাটাগরিতে বিশাল নিয়োগ</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-users text-emerald-600 mr-1"></i> মোট পদ: ৭৪০+ জন</p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">এসএসসি / এইচএসসি</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">০৫ নভেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>সরকারি ফি:</span>
-                                <span class="font-medium text-slate-800">১১২ ৳</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('খাদ্য অধিদপ্তর বিভিন্ন পদ আবেদন', 'সরকারি চাকরি', 112)" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Circular Card 6 -->
-                <div class="circular-card bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="admission" data-title="নার্সিং ও মিডওয়াইফারি ভর্তি পরীক্ষা">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-teal-100 text-teal-800">ভর্তি আবেদন</span>
-                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">চলমান</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug">নার্সিং ও মিডওয়াইফারি কাউন্সিল বিএসসি ও ডিপ্লোমা ভর্তি</h3>
-                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-user-nurse text-teal-600 mr-1"></i> সরকারি ও বেসরকারি নার্সিং কলেজ</p>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2 text-xs text-slate-600">
-                            <div class="flex justify-between">
-                                <span>যোগ্যতা:</span>
-                                <span class="font-medium text-slate-800">বিজ্ঞান / মানবিক / ব্যবসায়</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>আবেদনের শেষ তারিখ:</span>
-                                <span class="font-semibold text-rose-600">১৮ নভেম্বর ২০২৬</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>ফি:</span>
-                                <span class="font-medium text-slate-800">৭০০ / ৫০০ ৳</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 pt-3">
-                        <button onclick="prefillApplyModal('নার্সিং ও মিডওয়াইফারি ভর্তি আবেদন', 'ভর্তি আবেদন', 700)" class="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-file-signature"></i> আমাদের মাধ্যমে আবেদন করুন
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: Complete Digital Services Hub -->
-    <section id="services" class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-emerald-600 font-bold text-sm tracking-wide uppercase">সকল সুযোগ সুবিধা এক ছাদের নিচে</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">আমাদের ডিজিটাল ও কম্পোজ সেবাসমূহ</h2>
-                <p class="text-slate-500 text-sm mt-2">কম্পিউটার ও অনলাইনের যেকোনো সেবার জন্য আমাদের ফাইল পাঠিয়ে দিন, নির্ভুলভাবে কাজ সম্পন্ন করে আপনার ঠিকানায় বা হোয়াটসঅ্যাপে পাঠিয়ে দেব।</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Service Group 1: অনলাইন আবেদন -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">অনলাইন আবেদন কেন্দ্র</h3>
-                    <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                        চাকরি ও শিক্ষা সংক্রান্ত সব ধরনের অনলাইন ফর্ম পূরণ।
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> সরকারি ও বেসরকারি চাকরির আবেদন</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> বিশ্ববিদ্যালয় ও কলেজ ভর্তি ফরম</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> প্রাথমিক ও মাধ্যমিক বৃত্তি আবেদন</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> এডমিট কার্ড ডাউনলোড ও প্রিন্ট</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> টেলিটক এসএমএস ও পেমেন্ট সেবা</li>
-                    </ul>
-                    <a href="#order-now" onclick="selectServiceInOrder('অনলাইন আবেদন সেবা')" class="mt-5 block text-center text-xs font-bold text-emerald-600 hover:text-emerald-700 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 transition">
-                        আবেদন করতে ক্লিক করুন &rarr;
-                    </a>
-                </div>
-
-                <!-- Service Group 2: কম্পিউটার কম্পোজ ও ডিজাইন -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-keyboard"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">কম্পোজ ও গ্রাফিক্স ডিজাইন</h3>
-                    <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                        দ্রুতগতির নির্ভুল বাংলা ও ইংরেজি টাইপিং সেবা।
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> ইউনিক স্টাইলের আধুনিক CV / জীবনবৃত্তান্ত</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> প্রজেক্ট পেপার, থিসিস ও অ্যাসাইনমেন্ট</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> বাংলা ও ইংরেজি নির্ভুল কম্পোজ</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> ভিজিটিং কার্ড, ক্যাশমেমো ও বিল বই ডিজাইন</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> প্রশ্নপত্র কম্পোজ ও মডার্ন ফরম্যাটিং</li>
-                    </ul>
-                    <a href="#order-now" onclick="selectServiceInOrder('কম্পিউটার কম্পোজ ও ডিজাইন')" class="mt-5 block text-center text-xs font-bold text-teal-600 hover:text-teal-700 py-2 rounded-lg bg-teal-50 hover:bg-teal-100 transition">
-                        কম্পোজ অর্ডার দিন &rarr;
-                    </a>
-                </div>
-
-                <!-- Service Group 3: অফিসিয়াল ও ডিজিটাল ডকুমেন্ট -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-id-card"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">নাগরিক ও ডিজিটাল ডকুমেন্ট</h3>
-                    <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                        সকল জাতীয় ও প্রাতিষ্ঠানিক সনদ সংক্রান্ত কাজ।
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500"></i> NID কার্ড সংশোধন আবেদন ও ডাউনলোড</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500"></i> নতুন পাসপোর্ট আবেদন ও ফর্ম পূরণ</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500"></i> অনলাইন জন্ম ও মৃত্যু নিবন্ধন আবেদন</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500"></i> ট্রেড লাইসেন্স ও ই-টিন (e-TIN) সার্টিফিকেট</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500"></i> জমির খতিয়ান/পর্চা এবং নামজারি আবেদন</li>
-                    </ul>
-                    <a href="#order-now" onclick="selectServiceInOrder('ডিজিটাল ডকুমেন্ট ও এনআইডি সেবা')" class="mt-5 block text-center text-xs font-bold text-cyan-600 hover:text-cyan-700 py-2 rounded-lg bg-cyan-50 hover:bg-cyan-100 transition">
-                        কাগজপত্র প্রস্তুত করান &rarr;
-                    </a>
-                </div>
-
-                <!-- Service Group 4: প্রিন্টিং, স্ক্যান ও ফটো -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-print"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">প্রিন্ট, ফটো ও ল্যাব সেবা</h3>
-                    <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                        উচ্চমানের কালার প্রিন্ট ও প্রফেশনাল ফটো ফিনিশিং।
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> পাসপোর্ট সাইজ ফটো এডিটিং ও ল্যাব প্রিন্ট</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> জরুরি কালার ও ব্ল্যাক-হোয়াইট প্রিন্ট</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> হাই-রেজোলিউশন ডকুমেন্ট স্ক্যান</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> ওয়াটারপ্রুফ আইডি কার্ড ও লেমিনেশন</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> স্পাইরাল বাইন্ডিং ও বই বাঁধাই</li>
-                    </ul>
-                    <a href="#order-now" onclick="selectServiceInOrder('প্রিন্ট ও ফটো সেবা')" class="mt-5 block text-center text-xs font-bold text-amber-600 hover:text-amber-700 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 transition">
-                        প্রিন্ট অর্ডার করুন &rarr;
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: Service Fee & Price Estimator Calculator -->
-    <section id="calculator" class="py-16 bg-white border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-emerald-900 to-teal-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-                <!-- Background visual -->
-                <div class="absolute -right-10 -bottom-10 opacity-10 text-white text-9xl">
-                    <i class="fa-solid fa-calculator"></i>
-                </div>
-
-                <div class="relative z-10">
-                    <div class="text-center sm:text-left">
-                        <span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider border border-emerald-500/30">স্বচ্ছ সার্ভিস ফি</span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold mt-2">লাইভ সার্ভিস চার্জ ক্যালকুলেটর</h3>
-                        <p class="text-emerald-100/70 text-xs sm:text-sm mt-1">কাজের ধরন ও পৃষ্ঠার সংখ্যা নির্বাচন করে সম্ভাব্য খরচ এক পলকে দেখুন।</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                        <div>
-                            <label class="block text-xs font-medium text-emerald-200 mb-1.5">সেবার ধরন</label>
-                            <select id="calcServiceType" onchange="calculatePrice()" class="w-full bg-slate-900/80 border border-emerald-700/60 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
-                                <option value="compose_bn">বাংলা কম্পোজ (প্রতি পৃষ্ঠা)</option>
-                                <option value="compose_en">ইংরেজি কম্পোজ (প্রতি পৃষ্ঠা)</option>
-                                <option value="cv_making">স্ট্যান্ডার্ড জীবনবৃত্তান্ত / CV</option>
-                                <option value="govt_apply">চাকরির অনলাইন আবেদন ফি</option>
-                                <option value="nid_help">এনআইডি / জন্মসনদ আবেদন</option>
-                                <option value="color_print">কালার পেপার প্রিন্ট</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-medium text-emerald-200 mb-1.5">পরিমাণ / পৃষ্ঠা সংখ্যা</label>
-                            <input type="number" id="calcQuantity" value="1" min="1" max="1000" oninput="calculatePrice()" class="w-full bg-slate-900/80 border border-emerald-700/60 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-medium text-emerald-200 mb-1.5">ডেলিভারি মাধ্যম</label>
-                            <select id="calcDelivery" onchange="calculatePrice()" class="w-full bg-slate-900/80 border border-emerald-700/60 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
-                                <option value="0">হোয়াটসঅ্যাপ / ইমেইল (ফ্রি)</option>
-                                <option value="0">দোকান থেকে সরাসরি গ্রহণ (ফ্রি)</option>
-                                <option value="50">হোম ডেলিভারি (কিশোরগঞ্জ সদর +৫০৳)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Calculated result bar -->
-                    <div class="mt-8 pt-6 border-t border-emerald-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="text-center sm:text-left">
-                            <span class="text-xs text-emerald-200 block">আনুমানিক সর্বমোট খরচ:</span>
-                            <div class="text-3xl sm:text-4xl font-black text-emerald-400">
-                                ৳ <span id="calculatedTotal">২০</span> <span class="text-xs font-normal text-slate-300">(সরকারি ফি ব্যতিত)</span>
-                            </div>
-                        </div>
-
-                        <button onclick="applyCalculatedService()" class="w-full sm:w-auto px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl transition shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-cart-shopping"></i> এই খরচে অর্ডার দিন
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: Interactive Order & File Upload Portal (ঘরে বসেই সেবা নিন) -->
-    <section id="order-now" class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <span class="text-emerald-600 font-bold text-sm tracking-wide uppercase">সহজ ও দ্রুত</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">অনলাইন অর্ডার ও ডকুমেন্ট জমা দিন</h2>
-                <p class="text-slate-500 text-sm mt-1">আপনার তথ্য ও ফাইল দিয়ে সাবমিট করুন। আমরা সাথে সাথে হোয়াটসঅ্যাপে কনফার্ম করব।</p>
-            </div>
-
-            <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10">
-                <form id="orderForm" onsubmit="handleOrderSubmission(event)" class="space-y-6">
-                    
-                    <!-- Service Selector -->
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">
-                            ১. আপনি কি ধরনের সেবা নিতে চান? <span class="text-rose-500">*</span>
-                        </label>
-                        <select id="selectedService" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            <option value="">সেবা সিলেক্ট করুন...</option>
-                            <option value="সরকারি চাকরির আবেদন">সরকারি চাকরির অনলাইন আবেদন</option>
-                            <option value="বিশ্ববিদ্যালয় / কলেজ ভর্তি">বিশ্ববিদ্যালয় বা কলেজ ভর্তি আবেদন</option>
-                            <option value="আধুনিক জীবনবৃত্তান্ত (CV) তৈরি">প্রফেশনাল জীবনবৃত্তান্ত (CV / Resume) মেকিং</option>
-                            <option value="বাংলা / ইংরেজি কম্পিউটার কম্পোজ">বাংলা / ইংরেজি নিখুঁত টাইপিং বা কম্পোজ</option>
-                            <option value="এনআইডি সংশোধন বা রি-ইস্যু">জাতীয় পরিচয়পত্র (NID) সংশোধন / রি-ইস্যু</option>
-                            <option value="পাসপোর্ট আবেদন ফর্ম">নতুন পাসপোর্ট বা রিনিউ আবেদন</option>
-                            <option value="ট্রেড লাইসেন্স / ই-টিন">ট্রেড লাইসেন্স বা e-TIN সনদ আবেদন</option>
-                            <option value="জরুরি কালার প্রিন্ট ও ফটোকপি">জরুরি কালার প্রিন্টিং ও স্ক্যান সেবা</option>
-                            <option value="অন্যান্য ডিজিটাল কাজ">অন্যান্য বিশেষ কম্পিউটার কাজ</option>
-                        </select>
-                    </div>
-
-                    <!-- Personal Information -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">
-                                আপনার পুরো নাম <span class="text-rose-500">*</span>
-                            </label>
-                            <input type="text" id="custName" required placeholder="উদাঃ মোঃ রফিকুল ইসলাম" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">
-                                মোবাইল ও হোয়াটসঅ্যাপ নম্বর <span class="text-rose-500">*</span>
-                            </label>
-                            <input type="tel" id="custPhone" required placeholder="০১৭xxxxxxxx" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">
-                                বর্তমান ঠিকানা / উপজেলা
-                            </label>
-                            <input type="text" id="custAddress" placeholder="উদাঃ বটতলা, কিশোরগঞ্জ সদর" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">
-                                ডেলিভারি পাওয়ার মাধ্যম
-                            </label>
-                            <select id="deliveryOption" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                <option value="WhatsApp/Email Delivery">হোয়াটসঅ্যাপ / ইমেইলে সফটকপি (PDF)</option>
-                                <option value="Store Pickup">দোকান থেকে প্রিন্ট কপি সংগ্রহ</option>
-                                <option value="Home Delivery">কিশোরগঞ্জ শহরে হোম ডেলিভারি</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- File Simulator Upload Area -->
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">
-                            প্রয়োজনীয় ফাইল বা ছবি আপলোড করুন (সার্টিফিকেট/ছবি/হাতে লেখা কাগজ)
-                        </label>
-                        <div id="dropZone" class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-6 text-center bg-slate-50/50 hover:bg-emerald-50/30 transition cursor-pointer">
-                            <input type="file" id="fileInput" class="hidden" multiple onchange="handleFileSelect(event)">
-                            <div onclick="document.getElementById('fileInput').click()" class="space-y-2">
-                                <i class="fa-solid fa-cloud-arrow-up text-3xl text-emerald-600"></i>
-                                <p class="text-xs sm:text-sm font-semibold text-slate-700">ফাইল আপলোড করতে ক্লিক করুন অথবা ড্রপ করুন</p>
-                                <p class="text-[11px] text-slate-400">JPG, PNG, PDF বা Word ফাইল (সর্বোচ্চ ২৫ MB)</p>
-                            </div>
-                            <div id="fileListDisplay" class="mt-3 flex flex-wrap gap-2 justify-center"></div>
-                        </div>
-                    </div>
-
-                    <!-- Details / Instructions -->
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">
-                            কাজের বিস্তারিত বিবরণ ও বিশেষ নির্দেশনা
-                        </label>
-                        <textarea id="orderNotes" rows="3" placeholder="পদের নাম, ইউজার আইডি, রক্তের গ্রুপ বা অন্য কোনো বিশেষ তথ্য থাকলে এখানে লিখুন..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="pt-2">
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-extrabold text-base shadow-xl shadow-emerald-700/20 transition flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> অর্ডার সাবমিট ও হোয়াটসঅ্যাপে পাঠান
-                        </button>
-                        <p class="text-[11px] text-center text-slate-400 mt-2">
-                            * ফর্মটি সাবমিট করলে স্বয়ংক্রিয়ভাবে ন্যাচারটেকের অফিশিয়াল হোয়াটসঅ্যাপে আপনার কাজের ডিটেইলস পৌঁছে যাবে।
-                        </p>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: Real-time Order Tracking Simulator -->
-    <section id="tracking" class="py-16 bg-white border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <span class="text-emerald-600 font-bold text-sm tracking-wide uppercase">স্বচ্ছ সার্ভিস প্রক্রিয়া</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">অর্ডার লাইভ ট্র্যাকিং</h2>
-                <p class="text-slate-500 text-sm mt-1">অর্ডার আইডি বা মোবাইল নম্বর দিয়ে আপনার কাজের বর্তমান অবস্থা জানুন</p>
-            </div>
-
-            <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 max-w-2xl mx-auto">
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input type="text" id="trackingInput" placeholder="অর্ডার আইডি (যেমন: NT-8421) বা মোবাইল নম্বর দিন" class="flex-1 bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                    <button onclick="checkOrderStatus()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow transition">
-                        স্ট্যাটাস দেখুন
-                    </button>
-                </div>
-
-                <!-- Tracking result display box -->
-                <div id="trackingResult" class="mt-6 hidden pt-6 border-t border-slate-200">
-                    <div class="flex justify-between items-center mb-4">
-                        <div>
-                            <span class="text-xs text-slate-400">অর্ডার ট্র্যাকিং আইডি:</span>
-                            <h4 id="trackOrderId" class="font-extrabold text-slate-800 text-base">NT-8421</h4>
-                        </div>
-                        <span id="trackStatusBadge" class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full">
-                            কাজ প্রক্রিয়াধীন
-                        </span>
-                    </div>
-
-                    <!-- Stepper -->
-                    <div class="relative flex items-center justify-between text-xs font-semibold text-slate-600 mt-6">
-                        <div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-slate-200 w-full -z-0"></div>
-                        <div id="trackProgressBar" class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-emerald-500 w-2/3 -z-0 transition-all duration-500"></div>
-
-                        <div class="z-10 flex flex-col items-center bg-slate-50 px-1">
-                            <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center mb-1 text-xs shadow">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <span class="text-[11px] text-slate-700">ডকুমেন্ট গৃহীত</span>
-                        </div>
-
-                        <div class="z-10 flex flex-col items-center bg-slate-50 px-1">
-                            <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center mb-1 text-xs shadow animate-pulse">
-                                <i class="fa-solid fa-pen-nib"></i>
-                            </div>
-                            <span class="text-[11px] text-emerald-700 font-bold">কাজ চলছে</span>
-                        </div>
-
-                        <div class="z-10 flex flex-col items-center bg-slate-50 px-1">
-                            <div class="w-8 h-8 rounded-full bg-slate-300 text-slate-600 flex items-center justify-center mb-1 text-xs">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <span class="text-[11px] text-slate-400">রিভিউ সম্পন্ন</span>
-                        </div>
-
-                        <div class="z-10 flex flex-col items-center bg-slate-50 px-1">
-                            <div class="w-8 h-8 rounded-full bg-slate-300 text-slate-600 flex items-center justify-center mb-1 text-xs">
-                                <i class="fa-solid fa-box"></i>
-                            </div>
-                            <span class="text-[11px] text-slate-400">ডেলিভারি প্রস্তুত</span>
-                        </div>
-                    </div>
-
-                    <div id="trackNotes" class="mt-6 p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-600">
-                        <i class="fa-solid fa-circle-info text-emerald-600 mr-1"></i> আপনার আবেদনটির ড্রাফট কপি রেডি হচ্ছে, কিছুক্ষণের মধ্যেই হোয়াটসঅ্যাপে চেক করার জন্য পাঠানো হবে।
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: Customer Trust & Why NatureTech -->
-    <section class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                <div class="lg:col-span-1 space-y-4">
-                    <span class="text-emerald-600 font-bold text-sm tracking-wide uppercase">কেন আমরা আলাদা?</span>
-                    <h3 class="text-3xl font-extrabold text-slate-900 leading-tight">শতভাগ বিশ্বস্ত ও নির্ভুল অনলাইন সেবার প্রতীক</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        অনলাইন আবেদনে ভুল হলে অনেক সময় চাকরির স্বপ্ন ধূলিসাৎ হয়ে যায়। ন্যাচারটেকের প্রতিটি আবেদন ও কম্পোজ অভিজ্ঞ দক্ষ অপারেটর দ্বারা দুইবার রিভিউ করা হয়।
-                    </p>
-                    <div class="pt-2">
-                        <a href="https://wa.me/8801967831883" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-800">
-                            সরাসরি কথা বলুন স্বত্বাধিকারীর সাথে &rarr;
-                        </a>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="flex items-center gap-3 mb-2">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-user-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm text-slate-800">আব্দুল কাইয়ুম</h4>
-                                <span class="text-[11px] text-slate-400">প্রাথমিক শিক্ষক আবেদনকারী</span>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-600 italic">"ঘরে বসেই হোয়াটসঅ্যাপে ছবি ও তথ্য দিয়েছিলাম। মুহূর্তের মধ্যেই নির্ভুল আবেদন সম্পন্ন করে এডমিটের কপি দিয়ে দিয়েছে। অসাধারণ সেবা!"</p>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="flex items-center gap-3 mb-2">
-                            <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-user-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm text-slate-800">তানভীর আহমেদ</h4>
-                                <span class="text-[11px] text-slate-400">বিশ্ববিদ্যালয় শিক্ষার্থী</span>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-600 italic">"আমার ৬০ পৃষ্ঠার রিসার্চ রিপোর্ট অতি দ্রুত ও দারুণ সুন্দর ফরম্যাটে কম্পোজ করে দিয়েছে। টাইপিং স্পিড এবং নির্ভুলতা সত্যিই প্রশংসনীয়।"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
-                
-                <!-- Col 1: About -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2 space-x-reverse">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white">
-                            <i class="fa-solid fa-laptop-code text-xl"></i>
-                        </div>
-                        <span class="text-xl font-black text-white">NatureTech</span>
-                    </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        ন্যাচারটেক ডিজিটাল পয়েন্ট - আপনার ক্যারিয়ার ও প্রতিদিনের যাবতীয় অনলাইন আবেদনের বিশ্বস্ত সহযোগী। সঠিক সময়ে সেরা সেবা নিশ্চিত করাই আমাদের লক্ষ্য।
-                    </p>
-                    <div class="flex space-x-3 space-x-reverse text-slate-400 pt-1">
-                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-                        <a href="https://wa.me/8801967831883" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xs"></i></a>
-                        <a href="tel:01967831883" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- Col 2: Services -->
-                <div>
-                    <h4 class="font-bold text-sm text-emerald-400 mb-4 uppercase tracking-wider">জনপ্রিয় সেবাসমূহ</h4>
-                    <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#order-now" class="hover:text-white transition">সরকারি চাকরির অনলাইন আবেদন</a></li>
-                        <li><a href="#order-now" class="hover:text-white transition">পেশাদার বায়োডাটা / CV ডিজাইন</a></li>
-                        <li><a href="#order-now" class="hover:text-white transition">বিশ্ববিদ্যালয় ভর্তি ফর্ম ফিলাপ</a></li>
-                        <li><a href="#order-now" class="hover:text-white transition">জাতীয় পরিচয়পত্র সংশোধন</a></li>
-                        <li><a href="#order-now" class="hover:text-white transition">জরুরি দলিল ও অফিসিয়াল কম্পোজ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Business Hours -->
-                <div>
-                    <h4 class="font-bold text-sm text-emerald-400 mb-4 uppercase tracking-wider">কাজের সময়সূচি</h4>
-                    <ul class="space-y-2 text-xs text-slate-400">
-                        <li class="flex justify-between pb-1 border-b border-slate-800">
-                            <span>শনি - বৃহস্পতিবার:</span>
-                            <span class="text-white font-medium">সকাল ৯টা - রাত ১০টা</span>
-                        </li>
-                        <li class="flex justify-between pb-1 border-b border-slate-800">
-                            <span>শুক্রবার:</span>
-                            <span class="text-amber-400 font-medium">বিকাল ৩টা - রাত ১০টা</span>
-                        </li>
-                        <li class="pt-2 text-emerald-400">
-                            <i class="fa-solid fa-headset mr-1"></i> অনলাইন হোয়াটসঅ্যাপ অর্ডার ২৪/৭ উন্মুক্ত
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Contact -->
-                <div>
-                    <h4 class="font-bold text-sm text-emerald-400 mb-4 uppercase tracking-wider">আমাদের ঠিকানা</h4>
-                    <div class="space-y-2.5 text-xs text-slate-400">
-                        <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-location-dot text-emerald-400 mt-1"></i>
-                            <span>ন্যাচারটেক ডিজিটাল পয়েন্ট, উকিল পাড়া রোড, পুরান থানা, কিশোরগঞ্জ</span>
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <i class="fa-solid fa-phone text-emerald-400"></i>
-                            <a href="tel:01967831883" class="hover:text-white">হটলাইন: ০১৯৬৭-৮৩১৮৮৩</a>
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                            <a href="https://wa.me/8801967831883" target="_blank" class="hover:text-white">WhatsApp: 01967831883</a>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>© ২০২৬ NatureTech Digital Point. সর্বস্বত্ব সংরক্ষিত।</p>
-                <p>উকিল পাড়া রোড, পুরান থানা, কিশোরগঞ্জ | মোবা: ০১৯৬৭-৮৩১৮৮৩</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Quick WhatsApp Button -->
-    <a href="https://wa.me/8801967831883?text=আসসালামু%20আলাইকুম,%20আমি%20ন্যাচারটেক%20থেকে%20একটি%20অনলাইন%20সেবা%20নিতে%20চাই।" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl transition-all transform hover:scale-110 flex items-center justify-center badge-pulse group">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-bold text-xs pl-0 group-hover:pl-2">
-            হোয়াটসঅ্যাপে নক দিন
-        </span>
-    </a>
-
-    <!-- Order Confirmation Modal -->
-    <div id="orderSuccessModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 transform transition-all text-center">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto text-3xl mb-4">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            
-            <h3 class="text-xl font-bold text-slate-800">অর্ডার সফলভাবে তৈরি হয়েছে!</h3>
-            <p class="text-xs text-slate-500 mt-1">আপনার অর্ডার আইডি: <strong id="modalOrderId" class="text-emerald-700">NT-0000</strong></p>
-
-            <div class="bg-slate-50 rounded-xl p-4 my-4 text-left text-xs space-y-1.5 border border-slate-200">
-                <p><strong>সেবা:</strong> <span id="modalService">-</span></p>
-                <p><strong>গ্রাহকের নাম:</strong> <span id="modalName">-</span></p>
-                <p><strong>মোবাইল নম্বর:</strong> <span id="modalPhone">-</span></p>
-                <p><strong>ডেলিভারি মাধ্যম:</strong> <span id="modalDelivery">-</span></p>
-            </div>
-
-            <p class="text-xs text-slate-600 mb-5 leading-relaxed">
-                নিচের বাটনে ক্লিক করে সরাসরি হোয়াটসঅ্যাপে ন্যাচারটেকের কাছে আপনার অর্ডারের রসিদ ও ফাইল নিশ্চিত করুন।
-            </p>
-
-            <div class="flex flex-col gap-2">
-                <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> হোয়াটসঅ্যাপে মেসেজ পাঠিয়ে কনফার্ম করুন
-                </a>
-                <button onclick="closeModal()" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl text-xs transition">
-                    বন্ধ করুন
-                </button>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- JavaScript Interactive Logic -->
-    <script>
-        // Toggle Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
+  <!-- চলমান চাকরির সার্কুলার হাব -->
+  <section id="circulars" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">রিয়েল-টাইম সার্কুলার হাব</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">চলমান চাকরির নিয়োগ বিজ্ঞপ্তি</h2>
+          <p class="text-slate-600 text-sm mt-1">ন্যাচারটেকের নিজস্ব সার্ভিস চার্জ মাত্র ১০০ টাকা (সরকারি ফি ব্যতীত)।</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-slate-500">ফিল্টার:</span>
+          <button onclick="filterJobs('all')" class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white">সকল</button>
+          <button onclick="filterJobs('govt')" class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200">সরকারি/স্বায়ত্তশাসিত</button>
+          <button onclick="filterJobs('outsourcing')" class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200">আউটসোর্সিং</button>
+        </div>
+      </div>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if(mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            } else {
-                menuIcon.classList.replace('fa-bars', 'fa-xmark');
-            }
-        });
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        // Close mobile menu when clicking nav links
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            });
-        });
+        <!-- পায়রা বন্দর কর্তৃপক্ষ (নতুন যুক্ত) -->
+        <div class="job-card bg-slate-50 border-2 border-emerald-500/50 rounded-2xl p-5 hover:shadow-xl transition-all relative flex flex-col justify-between" data-category="outsourcing">
+          <div class="absolute -top-3 right-4 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow">
+            আউটসোর্সিং (২ বছর)
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-ship"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base leading-snug">পায়রা বন্দর কর্তৃপক্ষ</h3>
+                <p class="text-xs text-slate-500 font-medium">পদ সংখ্যা: ৫৮ টি</p>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <p class="text-slate-600 flex justify-between">
+                <span>আবেদনের মাধ্যম:</span>
+                <span class="font-semibold text-slate-800">হাতে লিখে আবেদন (ডাকযোগে)</span>
+              </p>
+              <p class="text-slate-600 flex justify-between">
+                <span>শেষ তারিখ:</span>
+                <span class="font-bold text-red-600">২৯ অক্টোবর ২০২৬</span>
+              </p>
+              <div class="border-t border-dashed border-slate-200 pt-1.5 mt-1.5 flex justify-between items-center text-xs">
+                <span class="text-slate-600 font-medium">আবেদন প্রস্তুত সার্ভিস ফি:</span>
+                <span class="font-bold text-emerald-700">১০০ টাকা</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500">ন্যাচারটেক থেকে আবেদনপত্র তৈরি, ড্রাফট কম্পোজ ও পোস্টাল রিকোয়ারমেন্ট সম্পন্ন করে দেওয়া হবে।</p>
+          </div>
+          <div class="pt-4 mt-2">
+            <button onclick="applyForJob('পায়রা বন্দর কর্তৃপক্ষ (৫৮ পদ - আউটসোর্সিং)', 'হাতে লিখে আবেদন', 0, 100)" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-paper-plane"></i> আবেদন তৈরি করে নিন
+            </button>
+          </div>
+        </div>
 
-        // Circulars Realtime Category Filter
-        function filterCirculars(category) {
-            const cards = document.querySelectorAll('.circular-card');
-            const buttons = document.querySelectorAll('.circ-filter-btn');
+        <!-- বাংলাদেশ রেলওয়ে -->
+        <div class="job-card bg-slate-50 border border-slate-200 rounded-2xl p-5 hover:shadow-xl transition-all relative flex flex-col justify-between" data-category="govt">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-train"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base leading-snug">বাংলাদেশ রেলওয়ে</h3>
+                <p class="text-xs text-slate-500 font-medium">পদ সংখ্যা: ৫১৬ টি (বিভিন্ন পদ)</p>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <p class="text-slate-600 flex justify-between">
+                <span>সরকারি ফি:</span>
+                <span class="font-semibold text-slate-800">২২৩ টাকা</span>
+              </p>
+              <p class="text-slate-600 flex justify-between">
+                <span>ন্যাচারটেক সার্ভিস ফি:</span>
+                <span class="font-semibold text-emerald-600">+ ১০০ টাকা</span>
+              </p>
+              <div class="border-t border-dashed border-slate-200 pt-1.5 mt-1.5 flex justify-between items-center text-xs">
+                <span class="text-slate-800 font-bold">সর্বমোট খরচ:</span>
+                <span class="font-extrabold text-emerald-700 text-sm">৩২৩ টাকা</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 mt-2">
+            <button onclick="applyForJob('বাংলাদেশ রেলওয়ে (বিভিন্ন পদ)', 'অনলাইন', 223, 100)" class="w-full bg-slate-900 hover:bg-emerald-600 text-white font-semibold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-paper-plane"></i> আমাদের মাধ্যমে আবেদন করুন
+            </button>
+          </div>
+        </div>
 
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-white', 'shadow', 'text-emerald-700');
-                btn.classList.add('hover:text-emerald-600');
-            });
+        <!-- প্রাথমিক শিক্ষক নিয়োগ -->
+        <div class="job-card bg-slate-50 border border-slate-200 rounded-2xl p-5 hover:shadow-xl transition-all relative flex flex-col justify-between" data-category="govt">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base leading-snug">সহকারী শিক্ষক নিয়োগ</h3>
+                <p class="text-xs text-slate-500 font-medium">প্রাথমিক শিক্ষা অধিদপ্তর</p>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <p class="text-slate-600 flex justify-between">
+                <span>সরকারি ফি:</span>
+                <span class="font-semibold text-slate-800">২২০ টাকা</span>
+              </p>
+              <p class="text-slate-600 flex justify-between">
+                <span>ন্যাচারটেক সার্ভিস ফি:</span>
+                <span class="font-semibold text-emerald-600">+ ১০০ টাকা</span>
+              </p>
+              <div class="border-t border-dashed border-slate-200 pt-1.5 mt-1.5 flex justify-between items-center text-xs">
+                <span class="text-slate-800 font-bold">সর্বমোট খরচ:</span>
+                <span class="font-extrabold text-emerald-700 text-sm">৩২০ টাকা</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 mt-2">
+            <button onclick="applyForJob('সহকারী শিক্ষক নিয়োগ (প্রাথমিক শিক্ষা অধিদপ্তর)', 'অনলাইন', 220, 100)" class="w-full bg-slate-900 hover:bg-emerald-600 text-white font-semibold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-paper-plane"></i> আমাদের মাধ্যমে আবেদন করুন
+            </button>
+          </div>
+        </div>
 
-            // highlight active button
-            event.target.classList.add('bg-white', 'shadow', 'text-emerald-700');
-            event.target.classList.remove('hover:text-emerald-600');
+      </div>
+    </div>
+  </section>
 
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+  <!-- অন্যান্য সেবাসমূহ -->
+  <section id="services" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">আমাদের ডিজিটাল সেবা</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">ন্যাচারটেকের সকল সেবাসমূহ</h2>
+        <p class="text-slate-600 text-sm mt-2">দোকানে না এসেও অনলাইনে যেকোনো কম্পোজ ও প্রিন্টিং কাজের অর্ডার দিন।</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 transition shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-keyboard"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">কম্পিউটার কম্পোজ</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">বাংলা ও ইংরেজি নির্ভুল টাইপিং, প্রশ্নপত্র তৈরি, অফিশিয়াল আবেদনপত্র ও নোটিশ তৈরি।</p>
+          <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">প্রতি পেজ ১০-২০ টাকা</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 transition shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-id-card"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">জীবনবৃত্তান্ত (CV) ডিজাইন</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">চাকরির জন্য আধুনিক ও আন্তর্জাতিক মানের আকর্ষণীয় রেজুমে বা কারিকুলাম ভিটা তৈরি।</p>
+          <span class="text-[11px] font-semibold text-teal-700 bg-teal-50 px-2 py-1 rounded">৫০ - ১৫০ টাকা</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 transition shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">এনআইডি ও সরকারি সেবা</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">জাতীয় পরিচয়পত্র সংশোধন, অনলাইন জন্ম নিবন্ধন আবেদন ও পাসপোর্ট ফর্ম পূরণ।</p>
+          <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">নিয়ম অনুযায়ী ফি</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 transition shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-print"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">ফটো ও কালার প্রিন্ট</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">ক্যানন হাই কোয়ালিটি কালার প্রিন্ট, পাসপোর্ট সাইজ ল্যাব প্রিন্ট ও ডকুমেন্ট স্ক্যানিং।</p>
+          <span class="text-[11px] font-semibold text-teal-700 bg-teal-50 px-2 py-1 rounded">উচ্চমান কালার প্রিন্ট</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ফি ক্যালকুলেটর -->
+  <section id="calculator" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-slate-900 to-emerald-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl">
+        <div class="max-w-xl">
+          <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider">স্মার্ট ফি এস্টিমেটর</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">কত খরচ হবে আগেই জেনে নিন</h2>
+          <p class="text-slate-300 text-xs sm:text-sm mt-2">চাকরির আবেদনের ক্ষেত্রে সরকারি ফি-র সাথে আমাদের সার্ভিস চার্জ মাত্র ১০০ টাকা যোগ হবে।</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">সেবার ধরন</label>
+              <select id="calcType" onchange="calculateFee()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <option value="job">চাকরির অনলাইন আবেদন (সার্ভিস ফি ১০০ টাকা)</option>
+                <option value="compose">কম্পিউটার কম্পোজ (বাংলা / ইংরেজি)</option>
+                <option value="cv">প্রফেশনাল CV / জীবনবৃত্তান্ত তৈরি</option>
+              </select>
+            </div>
+
+            <div id="jobFeeBox">
+              <label class="block text-xs font-medium text-slate-300 mb-1">সরকারি ফি (টাকা)</label>
+              <input type="number" id="calcGovFee" value="220" oninput="calculateFee()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p class="text-[11px] text-slate-400 mt-1">বিজ্ঞপ্তিতে উল্লেখিত সরকারি পরীক্ষার ফি বসান</p>
+            </div>
+
+            <div id="pagesBox" class="hidden">
+              <label class="block text-xs font-medium text-slate-300 mb-1">পৃষ্ঠা সংখ্যা (Pages)</label>
+              <input type="number" id="calcPages" value="1" min="1" oninput="calculateFee()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            </div>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-between border border-white/10">
+            <div>
+              <p class="text-xs text-slate-300 font-medium">হিসাবের বিবরণ</p>
+              <div class="mt-3 space-y-2 text-xs">
+                <div class="flex justify-between text-slate-300">
+                  <span id="detailLine1">সরকারি ফি:</span>
+                  <span id="detailVal1" class="font-bold text-white">২২০ ৳</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span id="detailLine2">ন্যাচারটেক সার্ভিস ফি:</span>
+                  <span id="detailVal2" class="font-bold text-emerald-400">১০০ ৳</span>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-white/20 pt-4 mt-4">
+              <p class="text-xs text-slate-300">সর্বমোট সম্ভাব্য খরচ:</p>
+              <p class="text-3xl font-black text-emerald-400 mt-1"><span id="calcTotal">৩২০</span> <span class="text-lg font-normal text-white">টাকা</span></p>
+              <button onclick="transferToOrder()" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition">
+                এই হিসাবে আবেদন করুন
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- অর্ডার ও ডকুমেন্ট জমা দেওয়ার ফর্ম -->
+  <section id="order" class="py-16 bg-slate-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+        <div class="text-center mb-8">
+          <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">ডকুমেন্ট জমা ও আবেদন পোর্টাল</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">আপনার কাজের তথ্য পাঠান</h2>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1">নিচের ফর্মটি পূরণ করে সাবমিট করলেই সকল তথ্য সহ আমাদের হোয়াটসঅ্যাপে চলে যাবেন।</p>
+        </div>
+
+        <form id="mainOrderForm" onsubmit="handleMainOrder(event)" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">আপনার নাম *</label>
+              <input type="text" id="orderName" required placeholder="মোঃ আব্দুল্লাহ" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">মোবাইল নম্বর *</label>
+              <input type="tel" id="orderPhone" required placeholder="019XXXXXXXX" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">আবেদন বা সেবার শিরোনাম *</label>
+            <input type="text" id="orderJobTitle" required placeholder="উদাঃ পায়রা বন্দর কর্তৃপক্ষ (৫৮ পদ) অথবা বাংলা কম্পোজ" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">সরকারি ফি (যদি থাকে)</label>
+              <input type="number" id="orderGovFee" placeholder="০" value="0" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">সার্ভিস ফি (টাকা)</label>
+              <input type="number" id="orderServiceFee" readonly value="100" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-bold text-emerald-700">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">কাজের বিস্তারিত বা বিশেষ নির্দেশনা</label>
+            <textarea id="orderNotes" rows="3" placeholder="আবেদনের জন্য প্রয়োজনীয় তথ্য যেমন জন্মতারিখ, এনআইডি নম্বর বা কম্পোজের জন্য বিশেষ কোনো ফন্ট ইত্যাদি লিখে দিন..." class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+          </div>
+
+          <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl text-xs text-emerald-800 space-y-1">
+            <p class="font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i> ছবি ও সার্টিফিকেট পাঠানোর নিয়ম:
+            </p>
+            <p>ফর্মটি সাবমিট করার পর স্বয়ংক্রিয়ভাবে হোয়াটসঅ্যাপ ওপেন হবে। সেখানে আপনার ছবি, স্বাক্ষর এবং সার্টিফিকেটের ছবি সরাসরি পাঠিয়ে দেবেন।</p>
+          </div>
+
+          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-600/20 text-sm flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i> হোয়াটসঅ্যাপে অর্ডার পাঠিয়ে দিন
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- যোগাযোগ ও ফুটার -->
+  <footer id="contact" class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 border-b border-slate-800">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white text-lg">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold tracking-tight">NatureTech</h3>
+              <p class="text-xs text-emerald-400">ন্যাচারটেক ডিজিটাল পয়েন্ট</p>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            কিশোরগঞ্জে ডিজিটাল সেবা, অনলাইন আবেদন এবং নিখুঁত কম্পোজ ও প্রিন্টিং সেবায় আপনার বিশ্বস্ত প্রতিষ্ঠান।
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300 mb-4">দোকানের ঠিকানা</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-emerald-500 mt-0.5"></i>
+              <span>উকিল পাড়া রোড, পুরান থানা, কিশোরগঞ্জ</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-emerald-500"></i>
+              <a href="tel:01967831883" class="hover:text-emerald-400">01967831883</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+              <a href="https://wa.me/8801967831883" target="_blank" class="hover:text-emerald-400">01967831883 (WhatsApp)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300 mb-4">কাজের সময়</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-2">প্রতিদিন সকাল ৯:০০ টা থেকে রাত ১০:০০ টা পর্যন্ত খোলা থাকে।</p>
+          <p class="text-xs text-emerald-400 font-semibold">অনলাইন হোয়াটসঅ্যাপ অর্ডার ২৪ ঘণ্টাই গ্রহণ করা হয়।</p>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500">
+        <p>© 2026 NatureTech (ন্যাচারটেক) | সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ফ্লোটিং হোয়াটসঅ্যাপ বাটন -->
+  <a href="https://wa.me/8801967831883" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition hover:scale-110">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- স্ক্রিপ্টস -->
+  <script>
+    const MY_PHONE = "8801967831883";
+
+    function filterJobs(cat) {
+      document.querySelectorAll('.job-filter-btn').forEach(b => {
+        b.classList.remove('bg-emerald-600', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-600');
+      });
+      event.target.classList.add('bg-emerald-600', 'text-white');
+      event.target.classList.remove('bg-slate-100', 'text-slate-600');
+
+      document.querySelectorAll('.job-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
         }
+      });
+    }
 
-        // Search circulars
-        const searchInput = document.getElementById('circularSearch');
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const cards = document.querySelectorAll('.circular-card');
+    function applyForJob(title, type, govFee, srvFee) {
+      document.getElementById('orderJobTitle').value = title;
+      document.getElementById('orderGovFee').value = govFee;
+      document.getElementById('orderServiceFee').value = srvFee;
+      document.getElementById('orderNotes').value = `আবেদনের ধরন: ${type}\nসরকারি ফি: ${govFee} টাকা, সার্ভিস ফি: ${srvFee} টাকা। সর্বমোট: ${govFee + srvFee} টাকা।`;
 
-            cards.forEach(card => {
-                const title = card.getAttribute('data-title').toLowerCase();
-                if (title.includes(query)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        // Pre-fill application order modal from circular card
-        function prefillApplyModal(jobTitle, category, fee) {
-            const serviceSelect = document.getElementById('selectedService');
-            serviceSelect.value = 'সরকারি চাকরির আবেদন';
-            const notes = document.getElementById('orderNotes');
-            notes.value = `আবেদনের বিষয়: ${jobTitle} (${category}), সরকারি ফি আনুমানিক: ${fee} টাকা।`;
-            
-            // Scroll smoothly to order form
-            document.getElementById('order-now').scrollIntoView({ behavior: 'smooth' });
-        }
+    function calculateFee() {
+      const type = document.getElementById('calcType').value;
+      const jobFeeBox = document.getElementById('jobFeeBox');
+      const pagesBox = document.getElementById('pagesBox');
 
-        function selectServiceInOrder(serviceName) {
-            const serviceSelect = document.getElementById('selectedService');
-            for(let i=0; i<serviceSelect.options.length; i++) {
-                if(serviceSelect.options[i].text.includes(serviceName) || serviceSelect.options[i].value.includes(serviceName)) {
-                    serviceSelect.selectedIndex = i;
-                    break;
-                }
-            }
-        }
+      let total = 0;
 
-        // Live Service Charge Calculator
-        const priceMap = {
-            'compose_bn': 20,
-            'compose_en': 25,
-            'cv_making': 100,
-            'govt_apply': 60,
-            'nid_help': 100,
-            'color_print': 10
-        };
+      if (type === 'job') {
+        jobFeeBox.classList.remove('hidden');
+        pagesBox.classList.add('hidden');
+        const gov = parseFloat(document.getElementById('calcGovFee').value) || 0;
+        const srv = 100;
+        total = gov + srv;
+        document.getElementById('detailLine1').innerText = "সরকারি ফি:";
+        document.getElementById('detailVal1').innerText = `${gov} ৳`;
+        document.getElementById('detailLine2').innerText = "ন্যাচারটেক সার্ভিস ফি:";
+        document.getElementById('detailVal2').innerText = `${srv} ৳`;
+      } else if (type === 'compose') {
+        jobFeeBox.classList.add('hidden');
+        pagesBox.classList.remove('hidden');
+        const pages = parseInt(document.getElementById('calcPages').value) || 1;
+        total = pages * 15;
+        document.getElementById('detailLine1').innerText = `কম্পোজ (${pages} পৃষ্ঠা):`;
+        document.getElementById('detailVal1').innerText = `${total} ৳`;
+        document.getElementById('detailLine2').innerText = "প্রিন্ট অপশন:";
+        document.getElementById('detailVal2').innerText = "আলাদা আলোচনা সাপেক্ষে";
+      } else {
+        jobFeeBox.classList.add('hidden');
+        pagesBox.classList.add('hidden');
+        total = 100;
+        document.getElementById('detailLine1').innerText = "প্রফেশনাল জীবনবৃত্তান্ত:";
+        document.getElementById('detailVal1').innerText = "১০০ ৳";
+        document.getElementById('detailLine2').innerText = "ডেলিভারি:";
+        document.getElementById('detailVal2').innerText = "PDF ও ডক ফাইল";
+      }
 
-        function calculatePrice() {
-            const type = document.getElementById('calcServiceType').value;
-            const qty = Math.max(1, parseInt(document.getElementById('calcQuantity').value) || 1);
-            const delivery = parseInt(document.getElementById('calcDelivery').value) || 0;
-            const rate = priceMap[type] || 20;
+      document.getElementById('calcTotal').innerText = total;
+    }
 
-            const total = (rate * qty) + delivery;
-            document.getElementById('calculatedTotal').innerText = total;
-        }
+    function transferToOrder() {
+      const type = document.getElementById('calcType').value;
+      if (type === 'job') {
+        const gov = parseFloat(document.getElementById('calcGovFee').value) || 0;
+        document.getElementById('orderJobTitle').value = "চাকরির অনলাইন আবেদন";
+        document.getElementById('orderGovFee').value = gov;
+        document.getElementById('orderServiceFee').value = 100;
+      } else if (type === 'compose') {
+        const pages = document.getElementById('calcPages').value;
+        document.getElementById('orderJobTitle').value = `কম্পিউটার কম্পোজ (${pages} পৃষ্ঠা)`;
+        document.getElementById('orderGovFee').value = 0;
+        document.getElementById('orderServiceFee').value = pages * 15;
+      } else {
+        document.getElementById('orderJobTitle').value = "জীবনবৃত্তান্ত (CV) তৈরি";
+        document.getElementById('orderGovFee').value = 0;
+        document.getElementById('orderServiceFee').value = 100;
+      }
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        function applyCalculatedService() {
-            const typeSelect = document.getElementById('calcServiceType');
-            const selectedText = typeSelect.options[typeSelect.selectedIndex].text;
-            const qty = document.getElementById('calcQuantity').value;
-            const total = document.getElementById('calculatedTotal').innerText;
+    function handleQuickSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('quickName').value;
+      const phone = document.getElementById('quickPhone').value;
+      const srv = document.getElementById('quickService').value;
 
-            const notes = document.getElementById('orderNotes');
-            notes.value = `ক্যালকুলেটর সিলেক্টেড সার্ভিস: ${selectedText}, পরিমাণ: ${qty}, আনুমানিক খরচ: ${total} ৳`;
-            
-            document.getElementById('order-now').scrollIntoView({ behavior: 'smooth' });
-        }
+      const msg = `*নতুন সেবা অনুরোধ (ন্যাচারটেক)*\n\nনাম: ${name}\nমোবাইল: ${phone}\nসেবা: ${srv}\n\nআমি এই সেবার জন্য অনলাইনে আবেদন/কাজ সম্পন্ন করতে চাই।`;
+      window.open(`https://wa.me/${MY_PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
 
-        // File Selection Simulator
-        let uploadedFileNames = [];
-        function handleFileSelect(e) {
-            const files = e.target.files;
-            const display = document.getElementById('fileListDisplay');
-            display.innerHTML = '';
-            uploadedFileNames = [];
+    function handleMainOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('orderName').value;
+      const phone = document.getElementById('orderPhone').value;
+      const title = document.getElementById('orderJobTitle').value;
+      const govFee = parseFloat(document.getElementById('orderGovFee').value) || 0;
+      const srvFee = parseFloat(document.getElementById('orderServiceFee').value) || 100;
+      const notes = document.getElementById('orderNotes').value;
+      const total = govFee + srvFee;
 
-            for (let i = 0; i < files.length; i++) {
-                uploadedFileNames.push(files[i].name);
-                const badge = document.createElement('span');
-                badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-medium border border-emerald-200';
-                badge.innerHTML = `<i class="fa-solid fa-file-check"></i> ${files[i].name}`;
-                display.appendChild(badge);
-            }
-        }
+      const msg = `*নতুন অনলাইন আবেদন/অর্ডার (NatureTech)*\n` +
+                  `━━━━━━━━━━━━━━━━━━\n` +
+                  `*গ্রাহকের নাম:* ${name}\n` +
+                  `*মোবাইল:* ${phone}\n` +
+                  `*কাজের বিষয়:* ${title}\n` +
+                  `*সরকারি ফি:* ${govFee} টাকা\n` +
+                  `*সার্ভিস ফি:* ${srvFee} টাকা\n` +
+                  `*সর্বমোট প্রদেয়:* ${total} টাকা\n` +
+                  `━━━━━━━━━━━━━━━━━━\n` +
+                  `*বিস্তারিত / নোট:* \n${notes || 'প্রয়োজনীয় ডকুমেন্ট নিচে পাঠাচ্ছি।'}`;
 
-        // Order Form Submission Handler
-        function handleOrderSubmission(event) {
-            event.preventDefault();
-
-            const service = document.getElementById('selectedService').value;
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const address = document.getElementById('custAddress').value || 'উল্লেখ করা হয়নি';
-            const delivery = document.getElementById('deliveryOption').value;
-            const notes = document.getElementById('orderNotes').value || 'কোনো অতিরিক্ত নোট নেই';
-
-            // Generate Random Order ID
-            const orderId = 'NT-' + Math.floor(1000 + Math.random() * 9000);
-
-            // Populate Modal
-            document.getElementById('modalOrderId').innerText = orderId;
-            document.getElementById('modalService').innerText = service;
-            document.getElementById('modalName').innerText = name;
-            document.getElementById('modalPhone').innerText = phone;
-            document.getElementById('modalDelivery').innerText = delivery;
-
-            // Generate WhatsApp message string
-            const filesText = uploadedFileNames.length > 0 ? uploadedFileNames.join(', ') : 'হোয়াটসঅ্যাপে সরাসরি পাঠাচ্ছি';
-            const waMessage = `*ন্যাচারটেক ডিজিটাল পয়েন্ট - নতুন অনলাইন অর্ডার*%0A%0A` +
-                              `*অর্ডার আইডি:* ${orderId}%0A` +
-                              `*সেবা:* ${service}%0A` +
-                              `*গ্রাহকের নাম:* ${name}%0A` +
-                              `*মোবাইল নম্বর:* ${phone}%0A` +
-                              `*ঠিকানা:* ${address}%0A` +
-                              `*ডেলিভারি মাধ্যম:* ${delivery}%0A` +
-                              `*সংযুক্ত ফাইল:* ${filesText}%0A` +
-                              `*নির্দেশনা:* ${notes}%0A%0A` +
-                              `_আমি অর্ডারটি সম্পন্ন করতে চাই। অনুগ্রহ করে দ্রুত কনফার্ম করুন।_`;
-
-            const natureTechWhatsApp = '8801967831883';
-            const waUrl = `https://wa.me/${natureTechWhatsApp}?text=${waMessage}`;
-
-            document.getElementById('modalWhatsAppBtn').href = waUrl;
-            document.getElementById('orderSuccessModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('orderSuccessModal').classList.add('hidden');
-            document.getElementById('orderForm').reset();
-            document.getElementById('fileListDisplay').innerHTML = '';
-        }
-
-        // Order Tracking Simulator
-        function checkOrderStatus() {
-            const inputVal = document.getElementById('trackingInput').value.trim();
-            const resultBox = document.getElementById('trackingResult');
-
-            if (!inputVal) {
-                alertBox('অনুগ্রহ করে একটি অর্ডার আইডি বা মোবাইল নম্বর লিখুন');
-                return;
-            }
-
-            resultBox.classList.remove('hidden');
-            document.getElementById('trackOrderId').innerText = inputVal.toUpperCase();
-        }
-
-        // In-app alert replacement
-        function alertBox(msg) {
-            const alertDiv = document.createElement('div');
-            alertDiv.className = 'fixed top-5 right-5 z-50 bg-rose-600 text-white px-5 py-3 rounded-xl shadow-xl text-sm font-semibold flex items-center gap-2 transition-all';
-            alertDiv.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> <span>${msg}</span>`;
-            document.body.appendChild(alertDiv);
-            setTimeout(() => {
-                alertDiv.remove();
-            }, 3000);
-        }
-    </script>
+      window.open(`https://wa.me/${MY_PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
 </body>
 </html>
